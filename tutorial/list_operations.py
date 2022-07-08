@@ -14,6 +14,6 @@ if __name__ == '__main__':
     for _ in range(N):
         command = input().split()
         if command[0] != 'print':
-            eval(f"items.{command[0]}({','.join(command[1:])})")
+            eval("items.{}({})".format(command[0], ','.join(command[1:])))
         else:
             print(items)
